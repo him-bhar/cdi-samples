@@ -1,0 +1,21 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head></h:head>
+
+<h:form>
+    <ui:insert name="create_form">
+        <!-- Default -->
+    </ui:insert>
+
+    <br />
+    <br />
+
+    <h:commandLink id="link" value="Name Converted">
+        <f:ajax event="click" listener="#{requestScope[beantt].convertNameToUpperCase2}" execute="dateOfExpense" render="dateOfExpense" />
+    </h:commandLink>
+
+</h:form>
+</ui:composition>
